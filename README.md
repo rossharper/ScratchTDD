@@ -18,7 +18,7 @@ This at least proved that it is possible to separate my algorithm logic and have
 
 ## Basic TDD
 
-Let's start with a proof that we can do basic TDD in Scratch by writing a test first, and making it pass. Remembering the basics of TDD: that we'll follow a _"Red -> Green -> Refactor"_ feedback loop.
+Let's start with a proof that we can do basic TDD in Scratch by writing a test first, and writing some code to make it pass. Remembering the basics of TDD: that we'll follow a _"Red -> Green -> Refactor"_ feedback loop.
 
 ![](RedGreenRefactor.png)
 
