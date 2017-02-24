@@ -198,6 +198,7 @@ One of the great things that comes with having a well tested codebase, is the ab
 Let's try that out. At the moment, the algorithm consists of three nested if-else conditional blocks. Let's change it to something simpler.
 
 Instead, we'll do the following:
+
 1. start with `output` as an empty string.
 2. if the `number` is divisible by 3, add "FIZZ" to the `output`.
 3. next, if the `number` is divisible by 5, then add "BUZZ" to the `output`. This should automagically give us "FIZZBUZZ" for the cases where `number` is divisible by 3 _and_ 5.
