@@ -14,11 +14,11 @@ One day, the crazy thought popped into my head: _"Can you TDD in Scratch?"_. I d
 
 So, in my "10% time", I looked into doing some TDD in Scratch. For my first experiment, I implemented the algorithm for the [Roman Numerals Kata](http://codingdojo.org/kata/RomanNumerals/). I cheated a little here, by implementing the algorithm first and then put a test around it afterward (this _isn't_ TDD!).
 
-_Note: in this repo you can find some Scratch files for different stages/solutions from this post._
-
 ![](RomanNumerals/Roman.png)
 
 This at least proved that it is possible to separate my algorithm logic and have tests around it. So next I decided to do some actual TDD in Scratch...
+
+_Note: in this repo you can find some Scratch files for different stages/solutions from this post._
 
 ## Basic TDD
 
