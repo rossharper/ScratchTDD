@@ -10,7 +10,7 @@ In our team, we use a Test-Driven Development (TDD) approach when writing code. 
 
 One day, the crazy thought popped into my head: _"Can you TDD in Scratch?"_. I did a brief Google, and couldn't find any examples of TDD in Scratch.
 
-So, in my "10% time", I looked into doing the [Roman Numerals Kata](http://codingdojo.org/kata/RomanNumerals/) in Scratch. On my first attempt, I cheated a little and implemented the algorithm first and then put a test around it (this _isn't_ TDD).
+So, in my "10% time", I looked into doing some TDD in Scratch. For my first experiment, I implemented the algorithm for the [Roman Numerals Kata](http://codingdojo.org/kata/RomanNumerals/). I cheated a little here, by implementing the algorithm first and then put a test around it afterward (this _isn't_ TDD!).
 
 ![](Roman.png)
 
@@ -18,7 +18,7 @@ This at least proved that it is possible to separate my algorithm logic and have
 
 ## Basic TDD
 
-Let's start with a proof that we can do basic TDD in Scratch by writing a test first, and writing some code to make it pass. Remembering the basics of TDD: that we'll follow a _"Red -> Green -> Refactor"_ feedback loop.
+Let's go back to basics and start with a proof that we can do TDD in Scratch by writing a test first, and writing some code to make it pass. Remembering the basics of TDD: that we'll follow a _"Red -> Green -> Refactor"_ feedback loop.
 
 ![](RedGreenRefactor.png)
 
@@ -34,6 +34,8 @@ This sets a global variable `testResult` to "FAIL" and shows it. I've arranged i
 
 Next let's write the actual failing test. I've set a testInputName of "Ross", an expected greeting of "Hello, Ross. Isn't TDD fun?". It then calls our — for now, empty — `Greeter` block, which takes a `name` as an input parameter.
 
+The test fails, as expected, because we didn't get our expected result.
+
 ![](BasicTDDFailingTest.png)
 
 Now that we have a failing test that describes the behaviour we want from our program, we can write some code in `Greeter` to make the test pass...
@@ -42,7 +44,7 @@ Now that we have a failing test that describes the behaviour we want from our pr
 
 Voilà! We have a passing test that proves that the `Greeter` function gives us the correct greeting.
 
-We could optionally refactor at this stage — that is, change our code without modifying its overall behaviour — to make it tidier, more readable etc, safe in the knowledge that our test will tell us if we have broken it, or if it still works as expected.
+We could optionally refactor at this stage — that is, change our code without modifying its overall behaviour — to make it tidier, more readable etc, safe in the knowledge that our test will tell us if we have broken it or if it still works as expected.
 
 We could also write some more tests to check that the program works with different names.
 
