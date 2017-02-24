@@ -137,7 +137,7 @@ We know that's not good enough. All numbers that are divisible by 3 should say "
 
 ### Refactor
 
-So far, we've largely skipped the opportunity to refactor either our code or our tests. However, our tests are beginning to look a little repetitive. They look the same, do the same thing, but with differnet inputs and expected outcomes. Let's refactor...
+So far, we've largely skipped the opportunity to refactor either our code or our tests. However, our tests are beginning to look a little repetitive. They look the same, do the same thing, but with different inputs and expected outcomes. Let's refactor...
 
 #### Extract Descriptive Blocks (Functions/Methods)
 
@@ -156,9 +156,10 @@ This looks like a good candidate for a "tabular test", sometimes referred to as 
 I've implemented this in Scratch with two _lists_: `testInputs` and `expectedTestOutputs`.
 
 I've refactored the test code so that we now have `RunFizzBuzzTableTests`, which:
+
 1. ensures the number of inputs match the number of expected outputs
-- iterates over the list of inputs
-- executes `testFizzBuzzOutputMatchesExpected` for each test input. This block does the individual test to calculate the output and verify that it matches the expected output.
+2. iterates over the list of inputs
+3. executes `testFizzBuzzOutputMatchesExpected` for each test input. This block does the individual test to calculate the output and verify that it matches the expected output.
 
 ![](FizzBuzz/FizzBuzz10_TableTest.png)
 
