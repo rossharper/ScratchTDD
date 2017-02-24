@@ -51,3 +51,5 @@ _TODO_
 ## Refactor
 
 ![](FizzBuzz09_RefactorStep1.png)
+
+![](FizzBuzz09_TableTest.png)
