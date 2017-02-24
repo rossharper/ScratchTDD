@@ -189,6 +189,8 @@ We wont be _exhaustive_ with our test cases — testing literally every possible
 
 ![](FizzBuzz/FizzBuzz14_MoreTests.png)
 
+The cat says "PASS"!
+
 ### Refactoring Safely
 
 One of the great things that comes with having a well tested codebase, is the ability to refactor safely. We can change the internals of our algorithm, knowing that we have a test suite that can verify that we have not broken its behaviour in terms of its inputs and expected outputs.
