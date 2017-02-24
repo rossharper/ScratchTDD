@@ -24,7 +24,7 @@ This at least proved that it is possible to separate my algorithm logic and have
 
 Let's go back to basics and start with a proof that we can do TDD in Scratch by writing a test first, and writing some code to make it pass. Remembering the basics of TDD: that we'll follow a _"Red -> Green -> Refactor"_ feedback loop.
 
-![](RedGreenRefactor.png)
+![](BasicTDD/RedGreenRefactor.png)
 
 For this example, we'll TDD a very simple function that takes a name as an input, and outputs a greeting containing that name. For example:
 
@@ -34,17 +34,17 @@ First of all, let's create an empty test. I've created it as a "block", which is
 
 This sets a global variable `testResult` to "FAIL" and shows it. I've arranged it so it looks a little like the Scratch Cat says the result.
 
-![](EmptyTest.png)
+![](BasicTDD/EmptyTest.png)
 
 Next let's write the actual failing test. I've set a testInputName of "Ross", an expected greeting of "Hello, Ross. Isn't TDD fun?". It then calls our — for now, empty — `Greeter` block, which takes a `name` as an input parameter.
 
 The test fails, as expected, because we didn't get our expected result.
 
-![](BasicTDDFailingTest.png)
+![](BasicTDD/BasicTDDFailingTest.png)
 
 Now that we have a failing test that describes the behaviour we want from our program, we can write some code in `Greeter` to make the test pass...
 
-![](BasicTDDPassingTest.png)
+![](BasicTDD/BasicTDDPassingTest.png)
 
 Voilà! We have a passing test that proves that the `Greeter` function gives us the correct greeting.
 
