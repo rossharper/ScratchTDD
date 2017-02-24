@@ -19,3 +19,5 @@ This at least proved that it is possible to separate my algorithm logic and have
 ## Basic TDD
 
 ![](EmptyTest.png)
+
+![](BasicTDDFailingTest.png)
