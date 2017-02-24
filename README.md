@@ -18,19 +18,70 @@ This at least proved that it is possible to separate my algorithm logic and have
 
 ## Basic TDD
 
+Let's start with a proof that we can do basic TDD in Scratch by writing a test first, and making it pass. Remembering the basics of TDD: that we'll follow a _"Red -> Green -> Refactor"_ feedback loop.
+
+![](RedGreenRefactor.png)
+
+For this example, we'll TDD a very simple function that takes a name as an input, and outputs a greeting containing that name. For example:
+
+_"Hello, Ross. Isn't TDD fun?"_
+
+First of all, let's create an empty test. I've created it as a "block", which is analogous to a function or method in other programming/scripting languages.
+
+This sets a global variable `testResult` to "FAIL" and shows it. I've arranged it so it looks a little like the Scratch Cat says the result.
+
 ![](EmptyTest.png)
+
+Next let's write the actual failing test. I've set a testInputName of "Ross", an expected greeting of "Hello, Ross. Isn't TDD fun?". It then calls our — for now, empty — `Greeter` block, which takes a `name` as an input parameter.
 
 ![](BasicTDDFailingTest.png)
 
+Now that we have a failing test that describes the behaviour we want from our program, we can write some code in `Greeter` to make the test pass...
+
 ![](BasicTDDPassingTest.png)
+
+Voilà! We have a passing test that proves that the `Greeter` function gives us the correct greeting.
+
+We could optionally refactor at this stage — that is, change our code without modifying its overall behaviour — to make it tidier, more readable etc, safe in the knowledge that our test will tell us if we have broken it, or if it still works as expected.
+
+We could also write some more tests to check that the program works with different names.
+
+But now that we've proven the basic premise of TDD in Scratch, let's move onto a real problem.
 
 ## FizzBuzz
 
 ### The problem
 
-_TODO_
+[FizzBuzz is a common coding kata](http://codingdojo.org/kata/FizzBuzz/). It is usually posed as such:
 
-http://codingdojo.org/kata/FizzBuzz/
+Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+For example:
+```
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+[... etc up to 100]
+```
+
+Let's explore the problem using TDD, and just write the function ("block") that decides what to output for each input number.
 
 ### Start with some basic tests
 
