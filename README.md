@@ -52,4 +52,8 @@ _TODO_
 
 ![](FizzBuzz09_RefactorStep1.png)
 
-![](FizzBuzz09_TableTest.png)
+![](FizzBuzz10_TableTest.png)
+
+## Buzzing
+
+![](FizzBuzz11_FailingBuzz.png)
