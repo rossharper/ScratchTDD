@@ -16,7 +16,7 @@ So, in my "10% time", I looked into doing some TDD in Scratch. For my first expe
 
 _Note: in this repo you can find some Scratch files for different stages/solutions from this post._
 
-![](Roman.png)
+![](RomanNumerals/Roman.png)
 
 This at least proved that it is possible to separate my algorithm logic and have tests around it. So next I decided to do some actual TDD in Scratch...
 
@@ -214,7 +214,7 @@ After I'd proven that I could TDD in Scratch, I decided to go back to my Roman N
 
 I mostly repeated much of what I'd done for FizzBuzz, and copied the test data from a [previous attempt to do this kata in Kotlin](https://github.com/rossharper/RomanNumerals-Kotlin).
 
-![](Roman02_Tested.png)
+![](RomanNumerals/Roman02_Tested.png)
 
 ## Next Steps
 
