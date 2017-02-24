@@ -57,3 +57,5 @@ _TODO_
 ## Buzzing
 
 ![](FizzBuzz11_FailingBuzz.png)
+
+![](FizzBuzz12_PassingBuzz.png)
