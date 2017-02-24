@@ -24,13 +24,15 @@ This at least proved that it is possible to separate my algorithm logic and have
 
 ![](BasicTDDPassingTest.png)
 
-# FizzBuzz
+## FizzBuzz
 
-## The problem
+### The problem
 
 _TODO_
 
-## Start with some basic tests
+http://codingdojo.org/kata/FizzBuzz/
+
+### Start with some basic tests
 
 ![](FizzBuzz01_FailingTest.png)
 
@@ -48,28 +50,32 @@ _TODO_
 
 ![](FizzBuzz08_NextFizz.png)
 
-## Refactor
+### Refactor
 
-### Extract Descriptive Blocks (Functions/Methods)
+#### Extract Descriptive Blocks (Functions/Methods)
 
 ![](FizzBuzz09_RefactorStep1.png)
 
-### Table Testing
+#### Table Testing
 
 ![](FizzBuzz10_TableTest.png)
 
-## Buzzin'
+### Buzzin'
 
 ![](FizzBuzz11_FailingBuzz.png)
 
 ![](FizzBuzz12_PassingBuzz.png)
 
-## FizzBuzz!
+### FizzBuzz!
 
 ![](FizzBuzz13_FizzBuzz.png)
 
 ![](FizzBuzz14_MoreTests.png)
 
-## Refactoring Safely
+### Refactoring Safely
 
 ![](FizzBuzz15_RefactoringSafely.png)
+
+## Revisiting Roman Numerals
+
+![](Roman02_Tested.png)
