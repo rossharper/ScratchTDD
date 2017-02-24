@@ -26,6 +26,12 @@ This at least proved that it is possible to separate my algorithm logic and have
 
 # FizzBuzz
 
+## The problem
+
+_TODO_
+
+## Start with some basic tests
+
 ![](FizzBuzz01_FailingTest.png)
 
 ![](FizzBuzz02_PassingTest.png)
@@ -37,3 +43,11 @@ This at least proved that it is possible to separate my algorithm logic and have
 ![](FizzBuzz05_TestResultsFailing.png)
 
 ![](FizzBuzz06_TestResultsPassing.png)
+
+![](FizzBuzz07_TestFizz.png)
+
+![](FizzBuzz08_NextFizz.png)
+
+## Refactor
+
+![](FizzBuzz09_RefactorStep1.png)
