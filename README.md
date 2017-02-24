@@ -99,41 +99,41 @@ Let's explore the problem using TDD, and just write the function ("block") that 
 
 Let's start with a simple failing test `testOneIsOne` that tests that for an input of `1`, the output is `1`...
 
-![](FizzBuzz01_FailingTest.png)
+![](FizzBuzz/FizzBuzz01_FailingTest.png)
 
 Make it pass by simply returning `1` from our `calculateOutputForNumber` block.
 
-![](FizzBuzz02_PassingTest.png)
+![](FizzBuzz/FizzBuzz02_PassingTest.png)
 
 Simply returning `1` isn't going to work for all numbers for FizzBuzz, so we should start to explore building out our algorithm by picking another test scenario and writing a failing test for it.
 
 Let's write a failing test for the number `2`.
 
-![](FizzBuzz03_FailingFor2.png)
+![](FizzBuzz/FizzBuzz03_FailingFor2.png)
 
 And make it pass...
 
-![](FizzBuzz04_ProblematicPassing2.png)
+![](FizzBuzz/FizzBuzz04_ProblematicPassing2.png)
 
 But, uh oh, there's a problem. I've made it pass by changing the output to `2`. And our `testResult` is saying "PASS". But _really_ `testOneIsOne` is failing. Our second test result for `testTwoIsTwo` is overwriting it.
 
 So, I refactored my test code a bit so that each individual test now adds its result to a list of `testResults`. We then have another block, `verifyAllTestsPass` that checks for any failures and sets our `overallTestResult` to "PASS" if there are none.
 
-![](FizzBuzz05_TestResultsFailing.png)
+![](FizzBuzz/FizzBuzz05_TestResultsFailing.png)
 
 That's better, it now correctly tells us that the first test is failing, as is the overall suite of tests. So let's fix our code.
 
 We'll just set the input `number` as the `output` for now...
 
-![](FizzBuzz06_TestResultsPassing.png)
+![](FizzBuzz/FizzBuzz06_TestResultsPassing.png)
 
 Next, let's add a test to check that an input of `3` returns "FIZZ". This will force us to build some more of our algorithm. Here, we simply check if the number is `3` and set the `output` to "FIZZ" if it is, or the input `number` if it is not.
 
-![](FizzBuzz07_TestFizz.png)
+![](FizzBuzz/FizzBuzz07_TestFizz.png)
 
 We know that's not good enough. All numbers that are divisible by 3 should say "FIZZ". Let's add another test for `6`, and change our code so that when the number is divided by 3, and the remainder is 0, we say "FIZZ". We'll use the [modulo operator](https://en.wikipedia.org/wiki/Modulo_operation) for that — this effectively tells us that the input number is _wholly_ divisible by 3.
 
-![](FizzBuzz08_NextFizz.png)
+![](FizzBuzz/FizzBuzz08_NextFizz.png)
 
 ### Refactor
 
@@ -143,9 +143,9 @@ So far, we've largely skipped the opportunity to refactor either our code or our
 
 Firstly, I'd like to extract the test verification to a block that has a descriptive name.
 
-![](FizzBuzz09_RefactorStep1.png)
+![](FizzBuzz/FizzBuzz09_RefactorStep1.png)
 
-Now that verification code only exists in one place, and we can _resuse_ it.
+Now that verification code only exists in one place, and we can _reuse_ it.
 
 But our tests still look a little repetitive...
 
@@ -160,7 +160,7 @@ I've refactored the test code so that we now have `RunFizzBuzzTableTests`, which
 - iterates over the list of inputs
 - executes `testFizzBuzzOutputMatchesExpected` for each test input. This block does the individual test to calculate the output and verify that it matches the expected output.
 
-![](FizzBuzz10_TableTest.png)
+![](FizzBuzz/FizzBuzz10_TableTest.png)
 
 ### Buzzin'
 
@@ -168,11 +168,11 @@ Now we can easily add tests by simply adding pairs of test inputs and expected o
 
 Let's add a test for `5` being "BUZZ". It will fail initially.
 
-![](FizzBuzz11_FailingBuzz.png)
+![](FizzBuzz/FizzBuzz11_FailingBuzz.png)
 
 And then modify our algorithm to correctly output "BUZZ" for a number divisible by 5...
 
-![](FizzBuzz12_PassingBuzz.png)
+![](FizzBuzz/FizzBuzz12_PassingBuzz.png)
 
 ### FizzBuzz!
 
@@ -180,13 +180,13 @@ We've almost covered all of our main scenarios. What about "FIZZBUZZ"?
 
 Simply add a test case to the table, and make it pass...
 
-![](FizzBuzz13_FizzBuzz.png)
+![](FizzBuzz/FizzBuzz13_FizzBuzz.png)
 
 What about more scenarios? Let's put a bunch of numbers and the expected outcomes in.
 
 We wont be _exhaustive_ with our test cases — testing literally every possible input and output. Whether and when you should do that is a topic that I wont go into here. For now we'll just put in a bunch of scenarios that give us enough coverage to give us the confidence that our algorithm works.
 
-![](FizzBuzz14_MoreTests.png)
+![](FizzBuzz/FizzBuzz14_MoreTests.png)
 
 ### Refactoring Safely
 
@@ -204,7 +204,7 @@ We can make our changes, then re-run the test suite to confirm that it still wor
 
 The cat says PASS...
 
-![](FizzBuzz15_RefactoringSafely.png)
+![](FizzBuzz/FizzBuzz15_RefactoringSafely.png)
 
 So there it is. We've implemented the core algorithm of FizzBuzz, in Scratch, using a Test-Driven Development approach. It can be done.
 
