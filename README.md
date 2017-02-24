@@ -83,23 +83,51 @@ Buzz
 [... etc up to 100]
 ```
 
+Essentially, this boils down to:
+- if a number is divisible by 3, say "FIZZ"
+- if a number is divisible by 5, say "BUZZ"
+- if a number is divisible by 3 _AND_ 5, say "FIZZBUZZ"
+- for all other numbers, say the number.
+
 Let's explore the problem using TDD, and just write the function ("block") that decides what to output for each input number.
 
 ### Start with some basic tests
 
+Let's start with a simple failing test `testOneIsOne` that tests that for an input of `1`, the output is `1`...
+
 ![](FizzBuzz01_FailingTest.png)
+
+Make it pass by simply returning `1` from our `calculateOutputForNumber` block.
 
 ![](FizzBuzz02_PassingTest.png)
 
+Simply returning `1` isn't going to work for all numbers for FizzBuzz, so we should start to explore building out our algorithm by picking another test scenario and writing a failing test for it.
+
+Let's write a failing test for the number `2`.
+
 ![](FizzBuzz03_FailingFor2.png)
+
+And make it pass...
 
 ![](FizzBuzz04_ProblematicPassing2.png)
 
+But, uh oh, there's a problem. I've made it pass by changing the output to `2`. And our `testResult` is saying "PASS". But _really_ `testOneIsOne` is failing. Our second test result for `testTwoIsTwo` is overwriting it.
+
+So, I refactored my test code a bit so that each individual test now adds its result to a list of `testResults`. We then have another block, `verifyAllTestsPass` that checks for any failures and sets our `overallTestResult` to "PASS" if there are none.
+
 ![](FizzBuzz05_TestResultsFailing.png)
+
+That's better, it now correctly tells us that the first test is failing, as is the overall suite of tests. So let's fix our code.
+
+We'll just set the input `number` as the `output` for now...
 
 ![](FizzBuzz06_TestResultsPassing.png)
 
+Next, let's add a test to check that an input of `3` returns "FIZZ". This will force us to build some more of our algorithm. Here, we simply check if the number is `3` and set the `output` to "FIZZ" if it is, or the input `number` if it is not.
+
 ![](FizzBuzz07_TestFizz.png)
+
+We know that's not good enough. All numbers that are divisible by 3 should say "FIZZ". Let's add another test for `6`, and change our code so that when the number is divided by 3, and the remainder is 0, we say "FIZZ". We'll use the [modulo operator](https://en.wikipedia.org/wiki/Modulo_operation) for that — this effectively tells us that the input number is _wholly_ divisible by 3.
 
 ![](FizzBuzz08_NextFizz.png)
 
