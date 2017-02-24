@@ -205,9 +205,9 @@ Instead, we'll do the following:
 
 We can make our changes, then re-run the test suite to confirm that it still works.
 
-The cat says PASS...
-
 ![](FizzBuzz/FizzBuzz15_RefactoringSafely.png)
+
+The cat says "PASS"!
 
 So there it is. We've implemented the core algorithm of FizzBuzz, in Scratch, using a Test-Driven Development approach. It can be done.
 
