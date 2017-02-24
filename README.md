@@ -54,8 +54,12 @@ _TODO_
 
 ![](FizzBuzz10_TableTest.png)
 
-## Buzzing
+## Buzzin'
 
 ![](FizzBuzz11_FailingBuzz.png)
 
 ![](FizzBuzz12_PassingBuzz.png)
+
+## FizzBuzz!
+
+![](FizzBuzz13_FizzBuzz.png)
