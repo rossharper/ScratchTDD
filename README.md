@@ -50,7 +50,11 @@ _TODO_
 
 ## Refactor
 
+### Extract Descriptive Blocks (Functions/Methods)
+
 ![](FizzBuzz09_RefactorStep1.png)
+
+### Table Testing
 
 ![](FizzBuzz10_TableTest.png)
 
@@ -65,3 +69,7 @@ _TODO_
 ![](FizzBuzz13_FizzBuzz.png)
 
 ![](FizzBuzz14_MoreTests.png)
+
+## Refactoring Safely
+
+![](FizzBuzz15_RefactoringSafely.png)
